@@ -27,7 +27,7 @@ namespace Blackjack_Casino
         {
             List<Card> dealerHand = new List<Card>();
             List<Card> playerHand = new List<Card>();
-            Console.WriteLine($"Balance: ${balance}");
+            Console.WriteLine($"Balance: {balance.ToString("C")}");
             Console.WriteLine("How much do you want to bet?");
             string answer = Console.ReadLine();
             double bet = 0;
@@ -78,7 +78,7 @@ namespace Blackjack_Casino
                 playerHand.ForEach(Console.WriteLine);
                 Console.WriteLine($"Your Hand Value: { playerHandValue}"); if (playerHandValue > 21) 
                 {
-                    Console.WriteLine($"YOU BUST, Your new balance is ${balance}");
+                    Console.WriteLine($"YOU BUST, Your new balance is {balance.ToString("C")}");
                     return;
                 }
                 Console.WriteLine("Would you like to hit or stand?");
@@ -103,27 +103,27 @@ namespace Blackjack_Casino
             {
                 Console.WriteLine($"THE DEALER BUSTED, YOU WIN {bet}");
                 balance += bet * 2;
-                Console.WriteLine($"Your new balance is ${balance}");
+                Console.WriteLine($"Your new balance is {balance.ToString("C")}");
                 return;
             }
             if (dealerHandValue == playerHandValue) 
             {
                 Console.WriteLine($"YOU TIED, YOU KEEP YOUR MONEY");
                 balance += bet;
-                Console.WriteLine($"Your new balance is ${balance}");
+                Console.WriteLine($"Your new balance is {balance.ToString("C")}");
                 return;
             }
             if (dealerHandValue > playerHandValue)
             {
                 Console.WriteLine($"YOU LOST");
-                Console.WriteLine($"Your new balance is ${balance}");
+                Console.WriteLine($"Your new balance is {balance.ToString("C")}");
                 return;
             }
             if (dealerHandValue < playerHandValue)
             {
                 Console.WriteLine($"YOU WIN, YOU WON {bet}");
                 balance += 2*bet;
-                Console.WriteLine($"Your new balance is ${balance}");
+                Console.WriteLine($"Your new balance is {balance.ToString("C")}");
                 return;
             }
         }
