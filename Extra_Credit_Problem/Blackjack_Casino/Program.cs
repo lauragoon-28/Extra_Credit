@@ -12,8 +12,8 @@ namespace Blackjack_Casino
             Console.WriteLine("~~~~~~~~~~~CASINO!!!~~~~~~~~~~");
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-            Console.WriteLine("");
-            Console.WriteLine("");
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("RULES:");
             Console.WriteLine("1. The goal of blackjack is to beat the dealer's hand without going over 21.");
             Console.WriteLine("2. Face cards are worth 10. Aces are worth 1 for simplicity.");
