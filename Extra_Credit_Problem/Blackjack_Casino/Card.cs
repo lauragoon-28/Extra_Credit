@@ -6,64 +6,65 @@ namespace Blackjack_Casino
 {
     class Card
     {
-        public string suit { get; set; }
+        public string Suit { get; set; }
         
-        public int value { get; set; }
+        public int Value { get; set; }
 
-        public int numericalValue { get; set; }
+        public int NumericalValue { get; set; }
 
         public Card()
         {
             Random rand = new Random();
-            value = rand.Next(1, 14);
+            Value = rand.Next(1, 14);
 
-            if (value > 10)
+            if (Value > 10)
             {
-                numericalValue = 10;
+                NumericalValue = 10;
             }
             else 
             {
-                numericalValue = value;
+                NumericalValue = Value;
             }
 
             int randSuit = rand.Next(1, 5);
             if (randSuit == 1)
             {
-                suit = "Hearts";
+                Suit = "Hearts";
             }
             else if (randSuit == 2)
             {
-                suit = "Spades";
+                Suit = "Spades";
             }
             else if (randSuit == 3)
             {
-                suit = "Diamonds";
+                Suit = "Diamonds";
             }
             else if (randSuit == 4)
             {
-                suit = "Clubs";
+                Suit = "Clubs";
             }
         }
 
         public override string ToString()
         {
-            if (value == 1)
+            if (Value == 1)
             {
-                return $"Ace of {suit}";
+                return $"Ace of {Suit}";
             }
-            else if (value == 11)
+            else if (Value == 11)
             {
-                return $"Jack of {suit}";
+                return $"Jack of {Suit}";
             }
-            else if (value == 12)
+            else if (Value == 12)
             {
-                return $"Queen of {suit}";
+                return $"Queen of {Suit}";
             }
-            else if (value == 13)
+
+            else if (Value == 13)
             {
-                return $"King of {suit}";
+                return $"King of {Suit}";
             }
-            return $"{value} of {suit}";
+            return $"{Value} of {Suit}";
         }
 
     }

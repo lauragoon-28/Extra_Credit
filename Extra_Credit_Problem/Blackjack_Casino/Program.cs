@@ -38,7 +38,7 @@ namespace Blackjack_Casino
             Console.WriteLine("Would you like to play a game of Blackjack? (yes or no)");
             answer = Console.ReadLine();
 
-            while (answer.ToLower() == "yes" && c1.balance > 0)
+            while (answer.ToLower() == "yes" && c1.Balance > 0)
             {
                 c1.PlayHand();
                 Console.WriteLine();
