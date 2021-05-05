@@ -76,7 +76,8 @@ namespace Blackjack_Casino
                 Console.WriteLine(dealerHandHidden);
                 Console.WriteLine($"Your Hand:");
                 playerHand.ForEach(Console.WriteLine);
-                Console.WriteLine($"Your Hand Value: { playerHandValue}"); if (playerHandValue > 21) 
+                Console.WriteLine($"Your Hand Value: { playerHandValue}"); 
+                if (playerHandValue > 21) 
                 {
                     Console.WriteLine($"YOU BUST, Your new balance is {Balance.ToString("C")}");
                     return;
@@ -87,7 +88,7 @@ namespace Blackjack_Casino
             Console.WriteLine();
             Console.WriteLine("DEALER'S TURN:");
             Console.WriteLine($"Dealer's Hand:");
-            playerHand.ForEach(Console.WriteLine);
+            dealerHand.ForEach(Console.WriteLine);
             Console.WriteLine($"Dealer's Hand Value: { dealerHandValue}");
             while (dealerHandValue < 17)
             {
@@ -95,7 +96,7 @@ namespace Blackjack_Casino
                 dealerHand.Add(temp);
                 dealerHandValue += temp.NumericalValue;
                 Console.WriteLine($"Dealer's Hand:");
-                playerHand.ForEach(Console.WriteLine);
+                dealerHand.ForEach(Console.WriteLine);
                 Console.WriteLine($"Dealer's Hand Value: { dealerHandValue}");
             }
 
